@@ -5,6 +5,7 @@
 }
 
 .about__img {
+    max-height: 400px;
     width: 350px;
     border-radius: 1.5rem;
     justify-self: center;

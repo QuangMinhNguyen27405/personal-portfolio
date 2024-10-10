@@ -12,7 +12,7 @@ const Backend = () => {
 
                     <div>
                         <h3 className="skills__name">C++</h3>
-                        <span className="skills__level">Class Project Level</span>
+                        <span className="skills__level">Class Project</span>
                     </div>
                 </div>
 
@@ -21,7 +21,7 @@ const Backend = () => {
 
                     <div>
                         <h3 className="skills__name">Java/Spring</h3>
-                        <span className="skills__level">Internship + Personal Project level</span>
+                        <span className="skills__level">Internship + Personal Project</span>
                     </div>
                 </div>
 
@@ -30,7 +30,7 @@ const Backend = () => {
 
                     <div>
                         <h3 className="skills__name">Python</h3>
-                        <span className="skills__level">Personal Project + Research level</span>
+                        <span className="skills__level">Personal Project + Research</span>
                     </div>
                 </div>
 
@@ -39,7 +39,7 @@ const Backend = () => {
 
                     <div>
                         <h3 className="skills__name">MySQL</h3>
-                        <span className="skills__level">Internship + Personal Project level</span>
+                        <span className="skills__level">Internship + Personal Project</span>
                     </div>
                 </div>
 

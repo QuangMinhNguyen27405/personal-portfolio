@@ -11,7 +11,7 @@ const Services = () => {
   return (
     <section className="services section" id="services">
         <h2 className="section__title">Experience</h2>
-        <span className="section__subtitle">What I do beyond the classroon</span>
+        <span className="section__subtitle">What I do beyond the classroom</span>
 
         <div className="services__container container grid">
 
@@ -30,18 +30,23 @@ const Services = () => {
                     <div className="services__modal-content">
                         <i className="uil uil-times services__modal-close" onClick={() => toggleTab(0)}></i>
 
-                        <h3 className="services__modal-title">Project Title</h3>
-                        <p className="services__modal-description">Project Description</p>
+                        <h3 className="services__modal-title">Research Assistant</h3>
+                        <p className="services__modal-description">MLab, Florida State University</p>
 
                         <ul className="services__modal-services grid">
                             <li className="services__modal-service">
                                 <i className="uil uil-check-circle services__modal-icon"></i>
-                                <p className="services__modal-info">I develop the backend</p>
+                                <p className="services__modal-info">Literature Review</p>
                             </li>
 
                             <li className="services__modal-service">
                                 <i className="uil uil-check-circle services__modal-icon"></i>
-                                <p className="services__modal-info">I develop the backend</p>
+                                <p className="services__modal-info">3D Model Production</p>
+                            </li>
+
+                            <li className="services__modal-service">
+                                <i className="uil uil-check-circle services__modal-icon"></i>
+                                <p className="services__modal-info">To be continue...</p>
                             </li>
 
                         </ul>
@@ -64,18 +69,23 @@ const Services = () => {
                     <div className="services__modal-content">
                         <i className="uil uil-times services__modal-close" onClick={() => toggleTab(0)}></i>
 
-                        <h3 className="services__modal-title">Project Title</h3>
-                        <p className="services__modal-description">Project Description</p>
+                        <h3 className="services__modal-title">Software Engineer Intern</h3>
+                        <p className="services__modal-description">FPT Software Company</p>
 
                         <ul className="services__modal-services grid">
                             <li className="services__modal-service">
                                 <i className="uil uil-check-circle services__modal-icon"></i>
-                                <p className="services__modal-info">I develop the backend</p>
+                                <p className="services__modal-info">Conducted thorough code reviews</p>
                             </li>
 
                             <li className="services__modal-service">
                                 <i className="uil uil-check-circle services__modal-icon"></i>
-                                <p className="services__modal-info">I develop the backend</p>
+                                <p className="services__modal-info">Develop backend features in Java/Spring/MySQL</p>
+                            </li>
+
+                            <li className="services__modal-service">
+                                <i className="uil uil-check-circle services__modal-icon"></i>
+                                <p className="services__modal-info">Write Junit tests</p>
                             </li>
 
                         </ul>

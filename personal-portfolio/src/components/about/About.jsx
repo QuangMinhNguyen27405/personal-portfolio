@@ -1,7 +1,7 @@
 import React from 'react'
 import "./about.css";
 import AboutImg from "../../assets/about.jpg";
-import CV from "../../assets/John-Cv.pdf";
+import CV from "../../assets/MinhNguyenResume.pdf";
 import Info from "./Info";
 
 const About = () => {
@@ -17,9 +17,9 @@ const About = () => {
           <Info />
 
           <p className="about__description">
-            As a dedicated Computer Science student 
-            at Florida State University, I am passionate
-             about leveraging technology to drive innovation and efficiency.
+          As a Full Stack Developer with a strong focus on Backend development,
+           I thrive on implementing innovative features and creating solutions for 
+           challenging, unconventional problems.
           </p>
 
           <a download="" href={CV} className="button button--flex">Download My CV
