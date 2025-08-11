@@ -42,9 +42,9 @@ const Contact = () => {
                         <i className="bx bxl-linkedin-square contact__card-icon"></i>
 
                         <h3 className="contact__card-title">Linkedin</h3>
-                        <span className="contact__card-data">Minh Nguyen</span>
+                        <span className="contact__card-data">Quang Minh Nguyen</span>
 
-                        <a href="https://www.linkedin.com/in/minh-nguyen-a4a8ab28b/" className="contact__button">Connect<i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
+                        <a href="https://www.linkedin.com/in/minhnguyen270405/" className="contact__button">Connect<i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
                     </div>
 
                     <div className="contact__card">

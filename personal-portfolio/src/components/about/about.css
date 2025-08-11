@@ -37,12 +37,21 @@
 }
 
 .about__subtitle {
-    font-size: var(--tiny-font-size);
+    font-size: var(--small-font-size);
 }
 
 .about__description {
     padding: 0 4rem 0 0;
     margin-bottom: var(--mb-2-5);
+}
+
+.bxs-graduation {
+    color: #782f40;
+}
+
+#education__about__box {
+    border-color: #ceb888;
+    border-width: 0.2rem;
 }
 
 /*=============== BREAKPOINTS ===============*/

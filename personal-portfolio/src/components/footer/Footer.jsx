@@ -5,11 +5,24 @@ const Footer = () => {
   return (
     <footer className="footer">
         <div className="footer__container container">
-            <h1 className="footer__title">Minh Nguyen</h1>
+            <h1 className="footer__title">Quang Minh Nguyen</h1>
 
             <ul className="footer__list">
+
+                <li>
+                    <a href="#home" className="footer__link">Home</a>
+                </li>
+
                 <li>
                     <a href="#about" className="footer__link">About</a>
+                </li>
+
+                <li>
+                    <a href="#skills" className="footer__link">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#services" className="footer__link">Experience</a>
                 </li>
 
                 <li>
@@ -22,7 +35,7 @@ const Footer = () => {
             </ul>
 
             <div className="footer__social">
-                <a href="https://www.linkedin.com/in/minh-nguyen-a4a8ab28b/" className="home__social-icon" target="_blank">
+                <a href="https://www.linkedin.com/in/minhnguyen270405/" className="home__social-icon" target="_blank">
                     <i className="uil uil-linkedin"></i>
                 </a>
 

@@ -11,8 +11,8 @@ const Backend = () => {
                     <i className="bx bx-badge-check"></i>
 
                     <div>
-                        <h3 className="skills__name">C++</h3>
-                        <span className="skills__level">Class Project</span>
+                        <h3 className="skills__name">NodeJS</h3>
+                        <span className="skills__level">Multiweek Group Project</span>
                     </div>
                 </div>
 
@@ -20,7 +20,7 @@ const Backend = () => {
                     <i className="bx bx-badge-check"></i>
 
                     <div>
-                        <h3 className="skills__name">Java/Spring</h3>
+                        <h3 className="skills__name">Java/Python</h3>
                         <span className="skills__level">Internship + Personal Project</span>
                     </div>
                 </div>
@@ -29,8 +29,8 @@ const Backend = () => {
                     <i className="bx bx-badge-check"></i>
 
                     <div>
-                        <h3 className="skills__name">Python</h3>
-                        <span className="skills__level">Personal Project + Research</span>
+                        <h3 className="skills__name">MySQL / MongoDB</h3>
+                        <span className="skills__level">Internship + Personal Project</span>
                     </div>
                 </div>
 
@@ -38,8 +38,17 @@ const Backend = () => {
                     <i className="bx bx-badge-check"></i>
 
                     <div>
-                        <h3 className="skills__name">MySQL</h3>
-                        <span className="skills__level">Internship + Personal Project</span>
+                        <h3 className="skills__name">Docker</h3>
+                        <span className="skills__level">Multiweek Group Project</span>
+                    </div>
+                </div>
+
+                <div className="skills__data">
+                    <i className="bx bx-badge-check"></i>
+
+                    <div>
+                        <h3 className="skills__name">AWS (Lambda)</h3>
+                        <span className="skills__level">Multiweek Group Project</span>
                     </div>
                 </div>
 

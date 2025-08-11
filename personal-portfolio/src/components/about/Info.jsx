@@ -3,7 +3,7 @@ import React from 'react'
 const Info = () => {
   return (
     <div className="about__info grid">
-        <div className="about__box">
+        <div id="education__about__box" className="about__box">
             <i class='bx bxs-graduation about__icon'></i>
             <h3 className="about__title">Education</h3>
             <span className="about__subtitle">Florida State University</span>
