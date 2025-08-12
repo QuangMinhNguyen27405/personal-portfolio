@@ -24,10 +24,10 @@ const Footer = () => {
                 <li>
                     <a href="#services" className="footer__link">Experience</a>
                 </li>
-
+{/* 
                 <li>
                     <a href="" className="footer__link">Projects</a>
-                </li>
+                </li> */}
 
                 <li>
                     <a href="#contact" className="footer__link">Contact</a>
@@ -35,15 +35,15 @@ const Footer = () => {
             </ul>
 
             <div className="footer__social">
-                <a href="https://www.linkedin.com/in/minhnguyen270405/" className="home__social-icon" target="_blank">
+                <a href="https://www.linkedin.com/in/minhnguyen270405/" className="home__social-icon" target="_blank" rel="noreferrer">
                     <i className="uil uil-linkedin"></i>
                 </a>
 
-                <a href="https://github.com/QuangMinhNguyen27405" className="home__social-icon" target="_blank">
+                <a href="https://github.com/QuangMinhNguyen27405" className="home__social-icon" target="_blank" rel="noreferrer">
                     <i className="uil uil-github-alt"></i>
                 </a>
 
-                <a href="https://www.facebook.com/profile.php?id=100032507893904" className="home__social-icon" target="_blank">
+                <a href="https://www.facebook.com/profile.php?id=100032507893904" className="home__social-icon" target="_blank" rel="noreferrer">
                     <i className="uil uil-facebook-f"></i>
                 </a>
             </div>
