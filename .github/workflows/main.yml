@@ -18,6 +18,7 @@ jobs:
 
     - name: Build Project
       run: |
+        cd personal-portfolio
         npm install
         npm run Build
     
