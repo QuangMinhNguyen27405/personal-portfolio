@@ -2,21 +2,26 @@
     position: fixed;
     right: 2.5rem;
     bottom: -20%;
-    background-color: var(--title-color);
-    opacity: 0.8;
+    background-color: var(--bg-elev);
+    border: 1px solid var(--clay);
+    opacity: 0.9;
     padding: 0.3rem 0.5rem;
-    border-radius: 0.4rem;
+    border-radius: 6px;
     z-index: var(--z-tooltip);
     transition: .4s;
 }
 
 .scrollup__icon {
     font-size: 1.5rem;
-    color: var(--container-color);
+    color: var(--clay);
 }
 
 .scrollup:hover {
-    background-color: var(--title-color-dark);
+    background-color: var(--clay);
+}
+
+.scrollup:hover .scrollup__icon {
+    color: var(--bg);
 }
 
 /* Show Scroll */

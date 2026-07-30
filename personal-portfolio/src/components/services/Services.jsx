@@ -14,8 +14,8 @@ const Services = () => {
     }
   return (
     <section className="services section" id="services">
-        <h2 className="section__title">Experience</h2>
-        <span className="section__subtitle">What I do beyond the classroom</span>
+        <h2 className="section__title">git log --experience</h2>
+        <span className="section__subtitle">what I do beyond the classroom</span>
 
         <div className="services__container container grid">
 

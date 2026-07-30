@@ -7,8 +7,11 @@
 .about__img {
     max-height: 400px;
     width: 350px;
-    border-radius: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-bright);
+    box-shadow: 0 0 0 4px var(--bg-elev-2), 0 20px 40px -20px rgba(0, 0, 0, 0.7);
     justify-self: center;
+    filter: grayscale(15%);
 }
 
 .about__info {
@@ -18,40 +21,56 @@
 }
 
 .about__box {
-    background-color: var(--content-color);
-    border: 1px solid rgba(0, 0, 0, 1);
-    border-radius: 0.75rem;
-    text-align: center;
-    padding: 1rem 1rem;
+    background-color: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    text-align: left;
+    padding: 1rem;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.about__box:hover {
+    border-color: var(--clay);
+    transform: translateY(-3px);
 }
 
 .about__icon {
-    font-size: 1.5rem;
-    color: var(--title-color);
+    font-size: 1.35rem;
+    color: var(--clay);
     margin-bottom: var(--mb-0-5);
 }
 
 .about__title {
-    font-size: var(--small-font-size);
+    font-size: var(--smaller-font-size);
     font-weight: var(--font-medium);
+    color: var(--text-faint);
+}
+
+.about__title::before {
+    content: "> ";
+    color: var(--clay);
 }
 
 .about__subtitle {
     font-size: var(--small-font-size);
+    color: var(--text);
 }
 
 .about__description {
     padding: 0 4rem 0 0;
     margin-bottom: var(--mb-2-5);
+    color: var(--text-dim);
+    line-height: 1.75;
+    border-left: 2px solid var(--border-bright);
+    padding-left: 1rem;
 }
 
 .bxs-graduation {
-    color: #782f40;
+    color: var(--clay);
 }
 
 #education__about__box {
-    border-color: #ceb888;
-    border-width: 0.2rem;
+    border-color: var(--clay);
 }
 
 /*=============== BREAKPOINTS ===============*/
@@ -79,8 +98,9 @@
     }
 
     .about__description {
-        padding: 0 5rem;
+        padding: 0 0 0 1rem;
         margin-bottom: 2rem;
+        text-align: left;
     }
 }
 
@@ -95,7 +115,7 @@
     }
 
     .about__description {
-        padding: 0;
+        padding: 0 0 0 1rem;
     }
 }
 
@@ -105,4 +125,3 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
-  

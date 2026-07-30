@@ -7,8 +7,8 @@ import Info from "./Info";
 const About = () => {
   return (
     <section className="about section" id="about">
-      <h2 className="section__title">About Me</h2>
-      <span className="section__subtitle">My Introduction</span>
+      <h2 className="section__title">cat about.md</h2>
+      <span className="section__subtitle">whoami</span>
 
       <div className="about__container container grid">
         <img src={AboutImg} alt="" className="about__img" />
@@ -22,9 +22,9 @@ const About = () => {
            challenging, unconventional problems.
           </p>
 
-          <a download="" href={CV} className="button button--flex">Download My CV
+          <a download="" href={CV} className="button button--flex">download resume.pdf
           <svg
-                class="button__icon"
+                className="button__icon"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"

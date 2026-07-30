@@ -1,40 +1,52 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-  --header-height: 3rem;
+  --header-height: 3.5rem;
 
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  --hue: 0;
-  --sat: 0%;
-  --title-color: hsl(var(--hue), var(--sat), 20%);
-  --title-color-dark: hsl(var(--hue), var(--sat), 0%);
-  --text-color: hsl(var(--hue), var(--sat), 46%);
-  --body-color: hsl(var(--hue), var(--sat), 98%);
-  --container-color: #fff;
+  /*========== Claude Code terminal palette ==========*/
+  --bg: #1a1815;
+  --bg-elev: #211f1b;
+  --bg-elev-2: #26231e;
+  --border: #34302a;
+  --border-bright: #4a443b;
+  --text: #ded9cd;
+  --text-dim: #9b948a;
+  --text-faint: #6f685e;
+  --clay: #d97757;
+  --clay-bright: #e79070;
+  --green: #83b783;
+  --yellow: #d9a441;
+  --blue: #7aa2c4;
+
+  /* legacy template variables mapped onto the terminal theme */
+  --title-color: var(--text);
+  --title-color-dark: var(--clay);
+  --text-color: var(--text-dim);
+  --body-color: var(--bg);
+  --container-color: var(--bg-elev);
+  --content-color: var(--bg-elev);
 
   /*========== Font and typography ==========*/
-  --body-font: "Poppins", sans-serif;
+  --body-font: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas,
+    monospace;
 
-  /*.5rem = 8px | 1rem = 16px ...*/
-  --big-font-size: 3.5rem;
-  --h1-font-size: 2.25rem;
+  --big-font-size: 3.25rem;
+  --h1-font-size: 1.75rem;
   --h2-font-size: 1.5rem;
   --h3-font-size: 1.25rem;
   --normal-font-size: 1rem;
   --small-font-size: 0.875rem;
   --smaller-font-size: 0.813rem;
-  --tiny-font-size: 0.625rem;
+  --tiny-font-size: 0.688rem;
 
   /*========== Font weight ==========*/
   --font-normal: 400;
   --font-medium: 500;
-  --font-semi-bold: 600;
+  --font-semi-bold: 700;
 
   /*========== Margenes Bottom ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
   --mb-0-25: 0.25rem;
   --mb-0-5: 0.5rem;
   --mb-0-75: 0.75rem;
@@ -53,10 +65,10 @@
 /* Responsive typography */
 @media screen and (max-width: 992px) {
   :root {
-    --big-font-size: 2.75rem;
+    --big-font-size: 2.5rem;
     --h1-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
-    --h3-font-size: 1rem;
+    --h3-font-size: 1.1rem;
     --normal-font-size: 0.938rem;
     --small-font-size: 0.813rem;
     --smaller-font-size: 0.75rem;
@@ -85,6 +97,13 @@ textarea {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
+  overflow-x: hidden;
+  background-image: radial-gradient(
+      circle at 1px 1px,
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 0
+    );
+  background-size: 22px 22px;
 }
 
 h1,
@@ -106,11 +125,28 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
+  background: none;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+::selection {
+  background-color: rgba(217, 119, 87, 0.3);
+  color: var(--text);
+}
+
+/* Terminal scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--border-bright);
+  border-radius: 0;
+  border: 2px solid var(--bg);
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -120,13 +156,26 @@ img {
 
 .section__title {
   font-size: var(--h1-font-size);
-  color: var(--title-color);
+  color: var(--text);
+  font-weight: var(--font-semi-bold);
+  letter-spacing: -0.5px;
+}
+
+.section__title::before {
+  content: "$ ";
+  color: var(--clay);
 }
 
 .section__subtitle {
   display: block;
   font-size: var(--small-font-size);
   margin-bottom: 4rem;
+  color: var(--text-faint);
+}
+
+.section__subtitle::before {
+  content: "# ";
+  color: var(--text-faint);
 }
 
 .section__title,
@@ -146,22 +195,130 @@ img {
   gap: 1.5rem;
 }
 
+/*=============== TERMINAL WINDOW CHROME ===============*/
+.term {
+  background-color: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.6);
+}
+
+.term__bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 1rem;
+  background-color: var(--bg-elev-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.term__dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.term__dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.term__dots span:nth-child(1) {
+  background-color: #e0625b;
+}
+.term__dots span:nth-child(2) {
+  background-color: #e0a83b;
+}
+.term__dots span:nth-child(3) {
+  background-color: #78b76a;
+}
+
+.term__title {
+  flex: 1;
+  text-align: center;
+  font-size: var(--smaller-font-size);
+  color: var(--text-faint);
+  margin-right: 44px;
+}
+
+.term__body {
+  padding: 1.75rem;
+}
+
+/* Prompt / command building blocks */
+.prompt {
+  color: var(--green);
+}
+.prompt__path {
+  color: var(--blue);
+}
+.prompt__sym {
+  color: var(--clay);
+}
+.comment {
+  color: var(--text-faint);
+}
+.cmd {
+  color: var(--text);
+}
+.out {
+  color: var(--text-dim);
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.55em;
+  height: 1.05em;
+  background-color: var(--clay);
+  vertical-align: text-bottom;
+  margin-left: 2px;
+  animation: blink 1.1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}
+
 /*=============== BUTTONS ===============*/
 .button {
   display: inline-block;
-  background-color: var(--title-color);
-  color: var(--container-color);
-  padding: 1.25rem 2rem;
-  border-radius: 1rem;
+  background-color: transparent;
+  color: var(--clay);
+  border: 1px solid var(--clay);
+  padding: 0.85rem 1.4rem;
+  border-radius: 6px;
   font-weight: var(--font-medium);
+  font-size: var(--small-font-size);
+  transition: background-color 0.25s, color 0.25s, box-shadow 0.25s;
+}
+
+.button::before {
+  content: "> ";
+  color: inherit;
+  opacity: 0.7;
 }
 
 .button:hover {
-  background-color: var(--title-color-dark);
+  background-color: var(--clay);
+  color: var(--bg);
+  box-shadow: 0 0 24px -6px var(--clay);
 }
 
 .button__icon {
   margin-left: var(--mb-0-5);
+}
+
+.button svg path:not([fill="none"]) {
+  fill: currentColor;
 }
 
 .button--flex {
@@ -178,12 +335,16 @@ img {
   }
 
   .button {
-    padding: 1rem 1.75rem;
+    padding: 0.75rem 1.25rem;
   }
 
   .button__icon {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .term__body {
+    padding: 1.25rem;
   }
 }
 
@@ -208,11 +369,15 @@ img {
 /* For small devices */
 @media screen and (max-width: 350px) {
   :root {
-    --big-font-size: 2.25rem;
+    --big-font-size: 2rem;
   }
 
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
+  }
+
+  .term__title {
+    display: none;
   }
 }

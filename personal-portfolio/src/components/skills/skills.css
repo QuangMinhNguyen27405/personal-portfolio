@@ -5,49 +5,74 @@
 }
 
 .skills__content {
-    background-color: var(--container-color);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 2rem 4rem;
-    border-radius: 1.25rem;
+    background-color: var(--bg-elev);
+    border: 1px solid var(--border);
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: border-color 0.3s;
+}
+
+.skills__content:hover {
+    border-color: var(--border-bright);
 }
 
 .skills__title {
-    font-size: var(--normal-font-size);
+    font-size: var(--small-font-size);
     font-weight: var(--font-medium);
-    text-align: center;
-    margin-bottom: var(--mb-1-5);
+    text-align: left;
+    margin-bottom: 0;
+    color: var(--text-dim);
+    padding: 0.75rem 1.25rem;
+    background-color: var(--bg-elev-2);
+    border-bottom: 1px solid var(--border);
+}
+
+.skills__title::before {
+    content: "$ cat ";
+    color: var(--clay);
 }
 
 .skills__box {
     display: flex;
     justify-content: center;
     column-gap: 2.5rem;
+    padding: 1.5rem 1.5rem;
 }
 
 .skills__group {
     display: grid;
     align-items: flex-start;
     row-gap: 1rem;
+    width: 100%;
 }
 
 .skills__data {
     display: flex;
-    column-gap: 0.5rem;
+    column-gap: 0.6rem;
+    align-items: flex-start;
 }
 
 .skills .bx-badge-check {
     font-size: 1rem;
-    color: var(--title-color);
+    color: var(--green);
+    margin-top: 3px;
 }
 
-.skills_name {
-    font-size: var(--normal-font-size);
+.skills__name {
+    font-size: var(--small-font-size);
     font-weight: var(--font-medium);
     line-height: 18px;
+    color: var(--text);
 }
 
 .skills__level {
     font-size: var(--tiny-font-size);
+    color: var(--text-faint);
+}
+
+.skills__level::before {
+    content: "# ";
 }
 
 /*=============== BREAKPOINTS ===============*/
@@ -68,16 +93,13 @@
     .skills__container {
         grid-template-columns: 1fr;
     }
-
-    .skills__content {
-        padding: 1.5rem;
-    }
 }
 
 /* For small devices */
 @media screen and (max-width: 350px) {
     .skills__box {
         column-gap: 1.25rem;
+        padding: 1.25rem;
     }
 
     .skills__name {
