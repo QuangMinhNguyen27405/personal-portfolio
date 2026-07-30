@@ -76,7 +76,7 @@ const PROJECTS = [
       'WebSocket ingestion: server-side pothole detection, images persisted to Google Cloud Storage',
       'Secure OAuth 2.0 authentication via Firebase for sign-in and sessions',
     ],
-    link: null, linkLabel: null,
+    link: 'https://www.open-pothole-map.xyz/', linkLabel: 'open-pothole-map.xyz',
   },
 ]
 
