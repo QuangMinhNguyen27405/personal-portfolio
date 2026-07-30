@@ -261,7 +261,8 @@ const Terminal = () => {
   }, [history])
 
   useEffect(() => {
-    inputRef.current?.focus()
+    const coarse = window.matchMedia && window.matchMedia('(pointer: coarse)').matches
+    if (!coarse) inputRef.current?.focus()
   }, [])
 
   const run = useCallback((raw) => {
@@ -359,9 +360,11 @@ const Terminal = () => {
             spellCheck="false"
             autoComplete="off"
             autoCapitalize="off"
+            autoCorrect="off"
             aria-label="terminal input"
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={onKeyDown}
+            onFocus={() => setTimeout(() => bottomRef.current?.scrollIntoView({ block: 'end' }), 250)}
           />
         </div>
 

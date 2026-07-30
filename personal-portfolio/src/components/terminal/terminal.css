@@ -159,9 +159,16 @@
     outline: none;
     color: var(--text);
     font-family: var(--body-font);
-    font-size: var(--small-font-size);
+    font-size: inherit;
     caret-color: var(--clay);
     padding: 0;
+}
+
+/* Touch devices: keep type >= 16px so iOS Safari never zooms on focus */
+@media (pointer: coarse) {
+    .term__body {
+        font-size: 16px;
+    }
 }
 
 /*=============== RESPONSIVE ===============*/

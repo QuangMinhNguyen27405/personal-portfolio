@@ -98,6 +98,8 @@ body {
   background-color: var(--body-color);
   color: var(--text-color);
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   background-image: radial-gradient(
       circle at 1px 1px,
       rgba(255, 255, 255, 0.02) 1px,
