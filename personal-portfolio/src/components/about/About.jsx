@@ -1,7 +1,7 @@
 import React from 'react'
 import "./about.css";
 import AboutImg from "../../assets/about.jpg";
-import CV from "../../assets/QuangMinhNguyenResume.pdf";
+import CV from "../../assets/QuangMinh_Nguyen_Resume.pdf";
 import Info from "./Info";
 
 const About = () => {
@@ -17,12 +17,12 @@ const About = () => {
           <Info />
 
           <p className="about__description">
-          As a Full Stack Developer with a strong focus on Backend development,
-           I thrive on implementing innovative features and creating solutions for 
-           challenging, unconventional problems.
+          As a full-stack developer with a strong focus on backend and AI systems,
+           I thrive on building agentic, retrieval-heavy products and solving
+           challenging, unconventional problems at scale.
           </p>
 
-          <a download="" href={CV} className="button button--flex">download resume.pdf
+          <a download="QuangMinh_Nguyen_Resume.pdf" href={CV} className="button button--flex">download resume.pdf
           <svg
                 className="button__icon"
                 xmlns="http://www.w3.org/2000/svg"

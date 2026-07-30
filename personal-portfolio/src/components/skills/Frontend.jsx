@@ -3,7 +3,7 @@ import React from 'react'
 const Frontend = () => {
   return (
     <div className="skills__content">
-        <h3 className="skills__title">Frontend Skills</h3>
+        <h3 className="skills__title">frontend.md</h3>
 
         <div className="skills__box">
             <div className="skills__group">
@@ -11,8 +11,8 @@ const Frontend = () => {
                     <i className="bx bx-badge-check"></i>
 
                     <div>
-                        <h3 className="skills__name">HTML/CSS</h3>
-                        <span className="skills__level">Basic</span>
+                        <h3 className="skills__name">React.js</h3>
+                        <span className="skills__level">Treverse, Recall AI</span>
                     </div>
                 </div>
 
@@ -20,8 +20,8 @@ const Frontend = () => {
                     <i className="bx bx-badge-check"></i>
 
                     <div>
-                        <h3 className="skills__name">JavaScript/React</h3>
-                        <span className="skills__level">Basic</span>
+                        <h3 className="skills__name">JavaScript / TypeScript</h3>
+                        <span className="skills__level">primary languages</span>
                     </div>
                 </div>
 
@@ -29,8 +29,8 @@ const Frontend = () => {
                     <i className="bx bx-badge-check"></i>
 
                     <div>
-                        <h3 className="skills__name">Bootstrap</h3>
-                        <span className="skills__level">Intermediate</span>
+                        <h3 className="skills__name">TailwindCSS / ShadCN</h3>
+                        <span className="skills__level">production UIs</span>
                     </div>
                 </div>
 
@@ -38,8 +38,8 @@ const Frontend = () => {
                     <i className="bx bx-badge-check"></i>
 
                     <div>
-                        <h3 className="skills__name">TailwindCSS</h3>
-                        <span className="skills__level">Intermediate</span>
+                        <h3 className="skills__name">HTML / CSS</h3>
+                        <span className="skills__level">comfortable</span>
                     </div>
                 </div>
 

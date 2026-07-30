@@ -1,8 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
 import './services.css';
-import FsuLogo from '../../assets/fsu-logo.png';
-import FptLogo from '../../assets/fpt-logo.png';
 import VtmpLogo from '../../assets/vtmp-logo.png';
 
 
@@ -21,46 +19,41 @@ const Services = () => {
 
             <div className="services__content">
                 <div>
-                    <img src={VtmpLogo} alt="VTMP Logo" className="services__icon services__logo" />
-                    <h3 className="services__title">Software Engineer Fellow <br /> @ VTMP </h3>
+                    <div className="services__logo services__badge">~/arcanic</div>
+                    <h3 className="services__title">Software Engineer Intern <br /> @ Arcanic AI </h3>
                 </div>
 
                 <span className="services__button" onClick={() => toggleTab(1)}>
                     View More
-                    <i className="uil uil-arrow-right services__button-icon"></i> 
+                    <i className="uil uil-arrow-right services__button-icon"></i>
                 </span>
 
                 <div className={toggleState === 1 ? "services__modal active-modal" : "services__modal"}>
                     <div className="services__modal-content">
                         <i className="uil uil-times services__modal-close" onClick={() => toggleTab(0)}></i>
 
-                        <h3 className="services__modal-title">Software Engineer Fellow</h3>
-                        <p className="services__modal-description">Viet Tech Mentorship Program</p>
+                        <h3 className="services__modal-title">Software Engineer Intern</h3>
+                        <p className="services__modal-description">Arcanic AI &middot; Hanoi, Vietnam &middot; May 2026 &ndash; Present</p>
 
                         <ul className="services__modal-services grid">
                             <li className="services__modal-service">
                                 <i className="uil uil-check-circle services__modal-icon"></i>
-                                <p className="services__modal-info">Developed Treverse: full-stack job application tracker</p>
+                                <p className="services__modal-info">Built an AI multi-agent legal platform in LangGraph over 160K legal documents</p>
                             </li>
 
                             <li className="services__modal-service">
                                 <i className="uil uil-check-circle services__modal-icon"></i>
-                                <p className="services__modal-info">Built UI with Tailwind CSS, ShadCN</p>
+                                <p className="services__modal-info">Lifted retrieval recall 82% &rarr; 91% and speed 40% via GraphRAG + HNSW vector search in Postgres</p>
                             </li>
 
                             <li className="services__modal-service">
                                 <i className="uil uil-check-circle services__modal-icon"></i>
-                                <p className="services__modal-info">Improved pagination speed 50% using MongoDB</p>
+                                <p className="services__modal-info">Built an LLM query layer: HyDE, multi-query expansion, self-reflective refinement</p>
                             </li>
 
                             <li className="services__modal-service">
                                 <i className="uil uil-check-circle services__modal-icon"></i>
-                                <p className="services__modal-info">Built interview sharing with Gemini API integration</p>
-                            </li>
-
-                            <li className="services__modal-service">
-                                <i className="uil uil-check-circle services__modal-icon"></i>
-                                <p className="services__modal-info">Automated daily updates with AWS Lambda, Redis</p>
+                                <p className="services__modal-info">Co-built a ReBAC authorization system for fine-grained, relationship-based access</p>
                             </li>
 
                         </ul>
@@ -70,36 +63,46 @@ const Services = () => {
 
             <div className="services__content">
                 <div>
-                    <img src={FsuLogo} alt="FREAC Logo" className="services__icon services__logo" />
-                    <h3 className="services__title">Application Developer Intern <br /> @ FREAC </h3>
+                    <img src={VtmpLogo} alt="VTMP Logo" className="services__icon services__logo" />
+                    <h3 className="services__title">Software Engineer Fellow <br /> @ VTMP </h3>
                 </div>
 
                 <span className="services__button" onClick={() => toggleTab(2)}>
                     View More
-                    <i className="uil uil-arrow-right services__button-icon"></i> 
+                    <i className="uil uil-arrow-right services__button-icon"></i>
                 </span>
 
                 <div className={toggleState === 2 ? "services__modal active-modal" : "services__modal"}>
                     <div className="services__modal-content">
                         <i className="uil uil-times services__modal-close" onClick={() => toggleTab(0)}></i>
 
-                        <h3 className="services__modal-title">Application Developer Intern </h3>
-                        <p className="services__modal-description">Florida Resource And Environmental Analysis Center</p>
+                        <h3 className="services__modal-title">Software Engineer Fellow</h3>
+                        <p className="services__modal-description">Viet Tech Mentorship Program &middot; Remote (New York, NY) &middot; Apr 2025 &ndash; Dec 2025</p>
 
                         <ul className="services__modal-services grid">
                             <li className="services__modal-service">
                                 <i className="uil uil-check-circle services__modal-icon"></i>
-                                <p className="services__modal-info">Engineered C++ GIS tool decoding sonar</p>
+                                <p className="services__modal-info">Built Treverse, a full-stack MERN job-application tracker, in a team of 10</p>
                             </li>
 
                             <li className="services__modal-service">
                                 <i className="uil uil-check-circle services__modal-icon"></i>
-                                <p className="services__modal-info">Cut analysis runtime 90% using profiling</p>
+                                <p className="services__modal-info">Cut data retrieval time 60% (8s &rarr; 3s) with cursor pagination + TanStack caching</p>
                             </li>
 
                             <li className="services__modal-service">
                                 <i className="uil uil-check-circle services__modal-icon"></i>
-                                <p className="services__modal-info">Parsed 20,000 PDFs extracting coordinates</p>
+                                <p className="services__modal-info">Architected 10+ REST APIs on a controller&ndash;service&ndash;repository pattern</p>
+                            </li>
+
+                            <li className="services__modal-service">
+                                <i className="uil uil-check-circle services__modal-icon"></i>
+                                <p className="services__modal-info">Wrote 40+ unit and integration tests (Mocha, Chai, Supertest)</p>
+                            </li>
+
+                            <li className="services__modal-service">
+                                <i className="uil uil-check-circle services__modal-icon"></i>
+                                <p className="services__modal-info">Automated an interview-resources pipeline (Gemini API, AWS Lambda, Redis)</p>
                             </li>
 
                         </ul>
@@ -109,80 +112,36 @@ const Services = () => {
 
             <div className="services__content">
                 <div>
-                    <img src={FsuLogo} alt="FSU Logo" className="services__icon services__logo" />
-                    <h3 className="services__title">Research Assistant <br /> @ Computer Vision Mlab - FSU </h3>
+                    <div className="services__logo services__badge">~/aws</div>
+                    <h3 className="services__title">Technical Lead <br /> @ AWS Cloud Club </h3>
                 </div>
 
                 <span className="services__button" onClick={() => toggleTab(3)}>
                     View More
-                    <i className="uil uil-arrow-right services__button-icon"></i> 
+                    <i className="uil uil-arrow-right services__button-icon"></i>
                 </span>
 
                 <div className={toggleState === 3 ? "services__modal active-modal" : "services__modal"}>
                     <div className="services__modal-content">
                         <i className="uil uil-times services__modal-close" onClick={() => toggleTab(0)}></i>
 
-                        <h3 className="services__modal-title">Research Assistant</h3>
-                        <p className="services__modal-description">Computer Vision MLab, Florida State University</p>
+                        <h3 className="services__modal-title">Technical Lead</h3>
+                        <p className="services__modal-description">AWS Cloud Club, FSU &middot; Tallahassee, FL &middot; Feb 2026 &ndash; Present</p>
 
                         <ul className="services__modal-services grid">
                             <li className="services__modal-service">
                                 <i className="uil uil-check-circle services__modal-icon"></i>
-                                <p className="services__modal-info">Developed synthetic data pipeline in OpenCV, PyTorch</p>
+                                <p className="services__modal-info">Leading a 6-member backend team building an image-processing system (Lambda, S3, DynamoDB)</p>
                             </li>
 
                             <li className="services__modal-service">
                                 <i className="uil uil-check-circle services__modal-icon"></i>
-                                <p className="services__modal-info">Conducted research and literature reviews</p>
+                                <p className="services__modal-info">Coordinating APIs, data schemas, and integration across frontend, cloud, and docs teams</p>
                             </li>
 
                             <li className="services__modal-service">
                                 <i className="uil uil-check-circle services__modal-icon"></i>
-                                <p className="services__modal-info">Managed Linux Conda environments</p>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div className="services__content">
-                <div>
-                    <img src={FptLogo} alt="FPT Software Logo" className="services__icon services__logo" />
-                    <h3 className="services__title">Software Engineer Intern <br /> @ FPT Software</h3>
-                </div>
-
-                <span className="services__button" onClick={() => toggleTab(4)}>
-                    View More
-                    <i className="uil uil-arrow-right services__button-icon"></i> 
-                </span>
-
-                <div className={toggleState === 4 ? "services__modal active-modal" : "services__modal"}>
-                    <div className="services__modal-content">
-                        <i className="uil uil-times services__modal-close" onClick={() => toggleTab(0)}></i>
-
-                        <h3 className="services__modal-title">Software Engineer Intern</h3>
-                        <p className="services__modal-description">FPT Software Company</p>
-
-                        <ul className="services__modal-services grid">
-                            <li className="services__modal-service">
-                                <i className="uil uil-check-circle services__modal-icon"></i>
-                                <p className="services__modal-info">Develop a comment API backend feature in Java/Spring/MySQL</p>
-                            </li>
-
-                            <li className="services__modal-service">
-                                <i className="uil uil-check-circle services__modal-icon"></i>
-                                <p className="services__modal-info">Conducted thorough code reviews</p>
-                            </li>
-
-                            <li className="services__modal-service">
-                                <i className="uil uil-check-circle services__modal-icon"></i>
-                                <p className="services__modal-info">Acheived 85% coverage in Junit tests</p>
-                            </li>
-
-                            <li className="services__modal-service">
-                                <i className="uil uil-check-circle services__modal-icon"></i>
-                                <p className="services__modal-info">Attended daily stand-up meetings and sprint planning</p>
+                                <p className="services__modal-info">Researched AWS + system design, ran technical presentations, onboarded backend members</p>
                             </li>
 
                         </ul>

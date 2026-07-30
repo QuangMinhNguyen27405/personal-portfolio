@@ -3,7 +3,7 @@ import React from 'react'
 const Backend = () => {
   return (
     <div className="skills__content">
-        <h3 className="skills__title">Backend Skills</h3>
+        <h3 className="skills__title">backend.md</h3>
 
         <div className="skills__box">
             <div className="skills__group">
@@ -11,8 +11,8 @@ const Backend = () => {
                     <i className="bx bx-badge-check"></i>
 
                     <div>
-                        <h3 className="skills__name">NodeJS</h3>
-                        <span className="skills__level">Multiweek Group Project</span>
+                        <h3 className="skills__name">Node.js / Express</h3>
+                        <span className="skills__level">REST APIs, 40+ tests</span>
                     </div>
                 </div>
 
@@ -20,8 +20,8 @@ const Backend = () => {
                     <i className="bx bx-badge-check"></i>
 
                     <div>
-                        <h3 className="skills__name">Java/Python</h3>
-                        <span className="skills__level">Internship + Personal Project</span>
+                        <h3 className="skills__name">FastAPI / Python</h3>
+                        <span className="skills__level">Recall AI, agents</span>
                     </div>
                 </div>
 
@@ -29,8 +29,8 @@ const Backend = () => {
                     <i className="bx bx-badge-check"></i>
 
                     <div>
-                        <h3 className="skills__name">MySQL / MongoDB</h3>
-                        <span className="skills__level">Internship + Personal Project</span>
+                        <h3 className="skills__name">LangChain / LangGraph</h3>
+                        <span className="skills__level">multi-agent RAG</span>
                     </div>
                 </div>
 
@@ -38,8 +38,8 @@ const Backend = () => {
                     <i className="bx bx-badge-check"></i>
 
                     <div>
-                        <h3 className="skills__name">Docker</h3>
-                        <span className="skills__level">Multiweek Group Project</span>
+                        <h3 className="skills__name">Spring Boot / Java</h3>
+                        <span className="skills__level">coursework + intern</span>
                     </div>
                 </div>
 
@@ -47,8 +47,17 @@ const Backend = () => {
                     <i className="bx bx-badge-check"></i>
 
                     <div>
-                        <h3 className="skills__name">AWS (Lambda)</h3>
-                        <span className="skills__level">Multiweek Group Project</span>
+                        <h3 className="skills__name">PostgreSQL / MongoDB</h3>
+                        <span className="skills__level">pgvector, aggregation</span>
+                    </div>
+                </div>
+
+                <div className="skills__data">
+                    <i className="bx bx-badge-check"></i>
+
+                    <div>
+                        <h3 className="skills__name">AWS / GCP &middot; Docker</h3>
+                        <span className="skills__level">Lambda, S3, containers</span>
                     </div>
                 </div>
 

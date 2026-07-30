@@ -46,6 +46,19 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
+.services__badge {
+    width: auto;
+    height: auto;
+    background-color: var(--bg-elev-2);
+    border: 1px solid var(--clay);
+    color: var(--clay);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    padding: 0.45rem 0.8rem;
+    display: inline-block;
+    box-shadow: none;
+}
+
 .services__title {
     font-size: var(--h3-font-size);
     margin-bottom: var(--mb-1);
