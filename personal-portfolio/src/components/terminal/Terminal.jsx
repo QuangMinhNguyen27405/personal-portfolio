@@ -90,13 +90,8 @@ const Banner = () => (
   <div className="term__welcome">
     <pre className="term__banner">{BANNER}</pre>
     <L>Hi, I'm <span className="o-accent">Quang Minh Nguyen</span> — Software Engineer (backend + AI).</L>
-    <L c="o-muted">Welcome to my terminal portfolio.</L>
-    <L>
-      Type <span className="o-cmd">help</span> to get started
-      <span className="o-muted"> · or tap a command below · </span>
-      <span className="o-muted">Tab</span><span className="o-muted"> autocompletes, </span>
-      <span className="o-muted">↑/↓</span><span className="o-muted"> recalls history.</span>
-    </L>
+    <L>New here? <span className="o-cmd">Tap a command below</span> (or type one) to explore.</L>
+    <L c="o-muted">Try <span className="o-cmd">about</span>, <span className="o-cmd">experience</span>, <span className="o-cmd">projects</span>, or <span className="o-cmd">resume</span> — the menu is already printed below.</L>
   </div>
 )
 
@@ -249,7 +244,9 @@ const ORDER = [
 const CHIPS = ['help', 'about', 'skills', 'experience', 'projects', 'resume', 'socials', 'clear']
 
 const Terminal = () => {
-  const [history, setHistory] = useState([])
+  const [history, setHistory] = useState(() => [
+    { cmd: 'help', output: COMMANDS.help.run([], { cmdHistory: [] }) },
+  ])
   const [input, setInput] = useState('')
   const [cmdHistory, setCmdHistory] = useState([])
   const [histIdx, setHistIdx] = useState(-1)
@@ -344,6 +341,7 @@ const Terminal = () => {
         ))}
 
         <div className="term__chips">
+          <span className="term__chips-label"># tap to explore:</span>
           {CHIPS.map((c) => (
             <button className="term__chip" key={c} onClick={(e) => { e.stopPropagation(); runChip(c) }}>
               {c}
