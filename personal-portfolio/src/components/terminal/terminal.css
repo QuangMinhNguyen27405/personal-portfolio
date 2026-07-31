@@ -90,6 +90,22 @@
     margin-right: 0.35rem;
 }
 
+.o-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0.2rem 0 0.1rem;
+}
+
+.o-tag {
+    font-size: var(--smaller-font-size);
+    color: var(--blue);
+    border: 1px solid var(--border-bright);
+    background-color: var(--bg-elev-2);
+    border-radius: 5px;
+    padding: 0.05rem 0.5rem;
+}
+
 .o-award {
     color: var(--yellow);
 }

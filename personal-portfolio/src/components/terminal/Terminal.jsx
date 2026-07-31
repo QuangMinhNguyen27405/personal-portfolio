@@ -32,6 +32,7 @@ const EXPERIENCE = [
       'Built an LLM query layer: HyDE, multi-query expansion, self-reflective refinement',
       'Co-built a ReBAC authorization system for fine-grained, relationship-based access',
     ],
+    tags: ['LangGraph', 'GraphRAG', 'pgvector', 'HyDE', 'PostgreSQL', 'ReBAC'],
   },
   {
     role: 'Software Engineer Fellow', org: 'Viet Tech Mentorship Program',
@@ -43,6 +44,7 @@ const EXPERIENCE = [
       'Wrote 40+ unit and integration tests (Mocha, Chai, Supertest)',
       'Automated an interview-resources pipeline (Gemini API, AWS Lambda, Redis)',
     ],
+    tags: ['React', 'Node.js', 'MongoDB', 'REST APIs', 'TanStack', 'AWS Lambda', 'Redis'],
   },
   {
     role: 'Technical Lead', org: 'AWS Cloud Club, FSU',
@@ -52,6 +54,7 @@ const EXPERIENCE = [
       'Coordinating APIs, data schemas, and integration across frontend, cloud, and docs teams',
       'Researched AWS + system design, ran technical presentations, onboarded backend members',
     ],
+    tags: ['AWS Lambda', 'S3', 'DynamoDB', 'System Design', 'Team Lead'],
   },
 ]
 
@@ -149,7 +152,24 @@ const COMMANDS = {
     ),
   },
   experience: {
-    desc: 'where I have worked',
+    desc: 'roles + skill keywords',
+    run: () => (
+      <>
+        {EXPERIENCE.map((e) => (
+          <div className="o-block" key={e.org}>
+            <L><span className="o-accent">{e.role}</span> <span className="o-muted">@ {e.org}</span></L>
+            <L c="o-muted">{e.meta}</L>
+            <div className="o-tags">
+              {e.tags.map((t) => <span className="o-tag" key={t}>{t}</span>)}
+            </div>
+          </div>
+        ))}
+        <L c="o-muted">Want the details? Run <span className="o-cmd">experience-detail</span>.</L>
+      </>
+    ),
+  },
+  'experience-detail': {
+    desc: 'full breakdown of each role',
     run: () => (
       <>
         {EXPERIENCE.map((e) => (
@@ -237,7 +257,7 @@ const COMMANDS = {
 }
 
 const ORDER = [
-  'help', 'about', 'whoami', 'education', 'skills', 'experience',
+  'help', 'about', 'whoami', 'education', 'skills', 'experience', 'experience-detail',
   'projects', 'resume', 'socials', 'email', 'banner', 'history', 'clear',
 ]
 
